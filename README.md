@@ -19,3 +19,7 @@ A responsive online bookstore website built with HTML and CSS.
 ## Project Status
 
 This is a front-end practice project.
+
+## Live Demo
+
+[View BookNest Live](https://moaz-ayman-dev.github.io/booknest-online-bookstore/)
