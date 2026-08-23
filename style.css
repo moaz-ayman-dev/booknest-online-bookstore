@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark : #252525;
+    --gold : #c49a5a;
+    --cream : #f7f3e8;
+    --gold-light : #d6b36a;
+}
+body{
+    background-image: linear-gradient(rgba(20, 20, 22, 0.75), rgba(20, 20, 20, 0.75)), url(background2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    border-radius: 40px;
+    background-color: var(--dark); 
+    margin: 20px 30px;
+}
+header h1{
+    font-size: 40px;
+    color: white;
+}
+header span{
+    color: var(--gold);
+}
+.Links{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+.Links a{
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--cream);
+    transition: 1s;
+    border-bottom: 2px solid transparent;
+}
+.Links a:hover{
+    border-bottom-color:var(--gold);
+    color: var(--gold);
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 30px;
+    gap: 80px;
+}
+main .left h2{
+    font-size: 40px;
+    background: linear-gradient(to right, #c49a5a , #5b0f0f);
+    color: transparent;
+    background-clip: text;
+}
+main .left i{
+    font-size: 30px;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+main .left p{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 15px;
+}
+main .left button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--gold);
+    color: var(--dark);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .left button:hover{
+    background-color: var(--dark);
+    color: var(--cream);
+    transform: translateY(-3px);
+}
+main .right img{
+    width: 700px;
+    height: 500px;
+}
+section{
+    background-color: var(--cream);
+    border-radius: 30px;
+    padding: 15px 15px;
+    margin: 40px 30px;
+}
+section h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.adventure h2{
+    background: linear-gradient(to right, #176b3a , #3268e2);
+    color: transparent;
+    background-clip: text;
+}
+.adventure .parent div{
+    background: var(--dark);
+    padding: 15px;
+}
+.adventure .parent h3{
+    background: linear-gradient(to right, #176b3a , #3268e2);
+    color: transparent;
+    background-clip: text;
+}
+.historical h2{
+    background: linear-gradient(to right, #5b0f0f , #c49a5a);
+    color: transparent;
+    background-clip: text;
+}
+.historical .parent div{
+     background: var(--dark);
+    padding: 15px;
+}
+.historical .parent h3{
+    background: linear-gradient(to right, #5b0f0f , #c49a5a);
+    color: transparent;
+    background-clip: text;
+}
+.horror h2{
+    background: linear-gradient(to right , #b30000 , #050505);
+    color: transparent;
+    background-clip: text;
+}
+.horror .parent div{
+      background: var(--dark);
+    padding: 15px;
+}
+.horror .parent h3{
+    background: linear-gradient(to right, #b30000 , #d9d9d9);
+    color: transparent;
+    background-clip: text;
+}
+section .parent{
+    color: white;
+}
+section .slide{
+    display: grid;
+    grid-template-columns: repeat(4 ,auto);
+    gap: 30px;
+}
+section .slide .parent img{
+    width: 100%;
+    height: 250px;
+}
+section .slide .parent{
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    transition: 1s ease;
+} 
+section .slide .parent:hover{
+transform: scale(1.03);
+}
+section .slide .parent div{
+    width: 100%;
+    padding: 15px;
+}
+section .slide .parent h3{
+    font-size: 26px;
+    height: 80px;
+
+}
+section .slide .parent .writer{
+    font-size: 18px;
+    display: block;
+    color: #c8b6ff;
+}
+section .slide .parent p{
+    font-size: 16px;
+    margin: 10px;
+    color: #e5e5e5;
+}
+section .slide .parent h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #d6b36a;
+}
+section .slide .parent .payment{
+    display: inline-block;
+    padding: 5px;
+    background-color: wheat;
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 1s;
+}
+section .slide .parent .payment:hover{
+    background-color: lightblue;
+    transform: translateY(-3px);
+}
+@media (max-wiAdth:768px){
+    section .slide{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media (max-width:480px){
+    section .slide{
+        grid-template-columns: repeat(1, auto);
+    }
+}
+@media (max-width:480px){
+    header{
+         flex-direction: column;
+    }
+    .Links{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    main{
+        flex-direction: column;
+    }
+    main .right img{
+        width: 300px;
+        height: 200px;
+    }
+}
